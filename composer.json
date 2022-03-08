@@ -6,7 +6,8 @@
         "php": "^7.4",
         "niels-nijens/protocol-stream": "^1.0",
         "symfony/dependency-injection": "^4.4 || ^5.0",
-        "symfony/http-kernel": "^4.4 || ^5.0"
+        "symfony/http-kernel": "^4.4 || ^5.0",
+        "sulu/web-twig": "^2.5"
     },
 
     "license": "MIT",

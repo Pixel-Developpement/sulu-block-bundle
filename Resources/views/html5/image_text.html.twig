@@ -1,9 +1,8 @@
 {% extends '@Block/html5/base.html.twig' %}
 
 {% block section_content %}
-
-    {% set displayOption = blockview['image'].displayOption|default('top') %}
-    
+    {% set displayOption = (blockview) ? blockview['image'].displayOption|default('top') : block['image']['displayOption']|default('top') %}
+    {% set resolved_image = (blockview) ? block['image'] : sulu_resolve_media(block['image']['id'], app.request.locale) %}
     {% set image %}
         {% set defaultFormat = 'bloc_large' %}
         {% set mobileFormat = 'bloc_mobile' %}
@@ -12,10 +11,9 @@
             {% set defaultFormat = 'bloc_left_right' %}
             {% set mobileFormat = 'bloc_left_right_mobile' %}
         {% endif %}
-
         <div class="block-image block-image__{{ displayOption }}">
             {# @see https://github.com/sulu/web-twig/blob/v2.4.0/docs/image.md #}
-            {{ get_image(block['image']|default, defaultFormat, {
+           {{ get_image(resolved_image|default, defaultFormat, {
                 '(max-width: 991px)': mobileFormat,
             }) }}
         </div>

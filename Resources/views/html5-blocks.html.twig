@@ -10,7 +10,7 @@
             with {
                 block: block,
                 rel: collection,
-                blockview: view[collection][index]
+                blockview: (view[collection][index] is defined) ? view[collection][index] : false
             } only
         %}
     {% endfor %}
