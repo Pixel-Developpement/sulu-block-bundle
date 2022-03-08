@@ -1,0 +1,20 @@
+{% set block_property = (block_property is defined) ? block_property : 'images' %}
+{% set images = (images is defined) ? images : block[block_property] %}
+{% set imagesDisplay = (blockview) ? images : images['ids'] %}
+
+{%- block images -%}
+<div class='images{% if block_property != 'images' %} {{ block_property }}{% endif %} {% if blockview %}{{ blockview[block_property].displayOption }}{% else %}{{ images['displayOption'] }}{% endif %}' property='{{ block_property }}'>
+    {% set resolved_images = sulu_resolve_medias(imagesDisplay, app.request.locale) %}
+    {% for image in resolved_images %}
+        {%- block image -%}
+        <img
+            {% block image_attributes %}
+                src='{% block image_source %}{{ image.url }}{% endblock %}'
+                title='{% block image_title %}{{ image.title }}{% endblock %}'
+                alt='{% block image_alternative %}{{ image.title }}{% endblock %}'
+            {% endblock %}
+        />
+        {%- endblock -%}
+    {% endfor %}
+</div>
+{%- endblock -%}

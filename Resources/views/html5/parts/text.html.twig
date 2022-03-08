@@ -1,0 +1,6 @@
+{% set block_property = (block_property is defined) ? block_property : 'text' %}
+{% set text = (block[block_property] is defined) ?  block[block_property] : false %}
+
+<div class='text{% if block_property != 'text' %} {{ block_property }}{% endif %}' property='{{ block_property }}'>
+    {{ text|raw }}
+</div>

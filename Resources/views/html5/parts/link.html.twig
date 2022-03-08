@@ -1,0 +1,6 @@
+{% set block_property = (block_property is defined) ? block_property : 'url' %}
+{% set title = (block.title is defined) ? block.title : block[block_property] %}
+
+{% if block[block_property] is defined and block[block_property] is not empty %}
+    <a href='{{ block[block_property] }}' class='{% block link_class %}{% endblock %}' property='{{ block_property }}'{% if block.new_tab %} target='_blank' rel='noopener noreferrer'{% endif %}>{{ title }}</a>
+{% endif %}

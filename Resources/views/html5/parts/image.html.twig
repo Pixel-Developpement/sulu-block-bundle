@@ -1,0 +1,19 @@
+{% set block_property = (block_property is defined) ? block_property : 'image' %}
+{% set images = (images is defined) ? images : block[block_property] %}
+
+{%- block images -%}
+<div class='images{% if block_property != 'images' %} {{ block_property }}{% endif %} {{ blockview[block_property].displayOption }}' property='{{ block_property }}'>
+    {% set resolved_images = sulu_resolve_medias(images, app.request.locale) %}
+    {% for image in resolved_images %}
+        {%- block image -%}
+        <img
+            {% block image_attributes %}
+                src='{% block image_source %}{{ image.url }}{% endblock %}'
+                title='{% block image_title %}{{ image.title }}{% endblock %}'
+                alt='{% block image_alternative %}{{ image.title }}{% endblock %}'
+            {% endblock %}
+        />
+        {%- endblock -%}
+    {% endfor %}
+</div>
+{%- endblock -%}
