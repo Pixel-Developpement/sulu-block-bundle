@@ -1,0 +1,44 @@
+{% extends '@Block/html5/base.html.twig' %}
+
+{% block section_content %}
+
+    {% set displayOption = blockview['image'].displayOption|default('top') %}
+    
+    {% set image %}
+        {% set defaultFormat = 'bloc_large' %}
+        {% set mobileFormat = 'bloc_mobile' %}
+
+        {% if displayOption in ['left', 'right'] %}
+            {% set defaultFormat = 'bloc_left_right' %}
+            {% set mobileFormat = 'bloc_left_right_mobile' %}
+        {% endif %}
+
+        <div class="block-image block-image__{{ displayOption }}">
+            {# @see https://github.com/sulu/web-twig/blob/v2.4.0/docs/image.md #}
+            {{ get_image(block['image']|default, defaultFormat, {
+                '(max-width: 991px)': mobileFormat,
+            }) }}
+        </div>
+    {% endset %}
+
+    {% if displayOption in ['top', 'left', 'right'] %}
+        {{ image }}
+    {% endif %}
+
+    {# h tag should only be outputted when a title is set #}
+    {% if block['title'] %}
+        <h2 class="block-title">{{ block['title'] }}</h2>
+    {% endif %}
+
+    {# div tag should only be outputted when a description is set #}
+    {% if block['text'] %}
+        <div>
+            {{ block['text']|raw }}
+        </div>
+    {% endif %}
+
+    {% if displayOption in ['bottom'] %}
+        {{ image }}
+    {% endif %}
+
+{% endblock %}

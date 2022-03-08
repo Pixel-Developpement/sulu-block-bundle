@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<type xmlns="http://schemas.sulu.io/template/template"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+
+    name="youtube"
+    >
+    <meta>
+        <title lang="en">Youtube video</title>
+        <title lang="fr">Vidéo Youtube</title>
+        <title lang="nl">Youtube video</title>
+    </meta>
+    <properties>
+        <xi:include href='sulu-block-bundle://properties/title.xml'/>
+        <xi:include href='sulu-block-bundle://properties/youtube_identifier.xml'/>
+        <property name="confidentiality" type="checkbox">
+            <params>
+                <param name="type" value="toggler"/>
+                <param name="label">
+                    <meta>
+                        <title lang="fr">Activer le mode de confidentialité avancé ?</title>
+                    </meta>
+                </param>
+            </params>
+        </property>
+        <property name="autoplay" type="checkbox">
+            <params>
+                <param name="type" value="toggler"/>
+                <param name="label">
+                    <meta>
+                        <title lang="fr">Lancer la vidéo automatiquement ?</title>
+                    </meta>
+                </param>
+            </params>
+        </property>
+        <property name="loop" type="checkbox">
+            <params>
+                <param name="type" value="toggler"/>
+                <param name="label">
+                    <meta>
+                        <title lang="fr">Rejouer automatiquement ?</title>
+                    </meta>
+                </param>
+            </params>
+        </property>
+        <property name="modestbranding" type="checkbox">
+            <params>
+                <param name="type" value="toggler"/>
+                <param name="label">
+                    <meta>
+                        <title lang="fr">Masquer le logo Youtube ?</title>
+                    </meta>
+                </param>
+            </params>
+        </property>
+
+        <property name="width" type="text_line" colspan="4">
+            <meta>
+                <title lang="fr">Largeur</title>
+            </meta>
+        </property>
+        <property name="heigth" type="text_line" colspan="4">
+            <meta>
+                <title lang="fr">Hauteur</title>
+            </meta>
+        </property>
+        <xi:include
+            href='sulu-block-bundle://app-properties/youtube.xml'
+            xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:properties/sulu:property)'
+            parse='xml'
+        >
+            <xi:fallback/>
+        </xi:include>
+    </properties>
+</type>

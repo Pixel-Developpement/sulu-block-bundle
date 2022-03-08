@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<type xmlns="http://schemas.sulu.io/template/template"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+
+    name="link"
+    >
+    <meta>
+        <title lang="en">Url</title>
+        <title lang="fr">Lien externe</title>
+    </meta>
+    <properties>
+        <xi:include href='sulu-block-bundle://properties/title.xml'/>
+        <xi:include href='sulu-block-bundle://properties/url.xml'/>
+        <xi:include
+            href='sulu-block-bundle://app-properties/link.xml'
+            xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:properties/sulu:property)'
+            parse='xml'
+        >
+            <xi:fallback/>
+        </xi:include>
+        <property name="new_tab" type="checkbox">
+            <meta>
+                <title lang="en">Open in new tab</title>
+                <title lang="fr">Ouvrir sur une nouvelle fenêtre</title>
+            </meta>
+        </property>
+    </properties>
+</type>

@@ -1,0 +1,10 @@
+{% extends '@Block/html5/base.html.twig' %}
+
+{% block section_content %}
+    {% block title %}
+        {% include '@Block/html5/parts/title.html.twig' %}
+    {% endblock %}
+    {%- block text -%}
+        {% include '@Block/html5/parts/text.html.twig' %}
+    {%- endblock -%}
+{% endblock %}

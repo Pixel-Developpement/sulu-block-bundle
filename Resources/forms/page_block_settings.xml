@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<form xmlns="http://schemas.sulu.io/template/template"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/form-1.0.xsd"
+>
+    <key>page_block_settings</key>
+
+    <properties>
+
+                <property name="animation" type="single_select">
+                    <meta>
+                        <title lang="fr">Animation</title>
+                    </meta>
+
+                    <params>
+                        <param name="default_value" value="fade"/>
+
+                        <param name="values" type="collection">
+                            <param name="fade">
+                                <meta>
+                                    <title lang="fr">Fade</title>
+                                </meta>
+                            </param>
+
+                            <param name="slide-up">
+                                <meta>
+                                    <title lang="fr">Apparition vers le haut</title>
+                                </meta>
+                            </param>
+                        </param>
+                    </params>
+                </property>
+
+    </properties>
+</form>
