@@ -1,5 +1,5 @@
 {
-    "name": "pixel/sulu-block-bundle",
+    "name": "pixeldev/sulu-block-bundle",
     "description": "A Symfony Bundle for Sulu content management platform containing boilerplate blocks",
     "type": "library",
     "require": {
