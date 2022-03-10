@@ -7,7 +7,7 @@ C'est un fork du projet https://github.com/Harborn-digital/sulu-block-bundle
 ## 1. Installation
 ### Composer
 ```bash
-composer require pixel/sulu-block-bundle
+composer require pixeldev/sulu-block-bundle
 ```
 
 ## 2. Usage
@@ -125,6 +125,7 @@ Par exemple
 - Texte enrichi avec un titre (text)
 - Images avec un titre (images)
 - Images avec un titre et un texte enrichi (images_text)
+- Image, titre avec sous-titre et citation (images_title_subtitle_quote)
 - Vidéo Youtube (youtube)
 - Lien (link)
 

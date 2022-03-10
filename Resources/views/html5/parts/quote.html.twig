@@ -1,0 +1,13 @@
+{% set block_property = (block_property is defined) ? block_property : 'quote' %}
+
+{% block before_quote %}{% endblock %}
+
+{% block quote %}
+    {% if block[block_property] is defined and block[block_property] is not empty %}
+       <blockquote>
+           {{ block[block_property] }}
+       </blockquote>
+    {% endif %}
+{% endblock %}
+
+{% block after_quote %}{% endblock %}

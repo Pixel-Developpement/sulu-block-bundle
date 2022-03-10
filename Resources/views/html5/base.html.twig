@@ -1,7 +1,7 @@
 {% set rel = (rel is defined) ? rel : 'blocks' %}
 
 {%- block section %}
-<section {% block section_attributes %}class='{% block section_class_attribute_value %}block {{ block.type }}{% endblock %}' rel='{{ rel }}' typeof='block'{% endblock %}>
+<section {% block section_attributes %}class='{% block section_class_attribute_value %}block {{ block.type }}{% endblock %}  {% if block['settings']['class_css'] is defined %}{{ block['settings']['class_css'] }}{% endif %}' rel='{{ rel }}' typeof='block'{% endblock %} {% if block['settings']['animation'] is defined %}data-sal="{{ block['settings']['animation'] }}"{% endif %} {% if block['settings']['animation_duration'] is defined %}data-duration="{{ block['settings']['animation_duration']|default(1000) }}"{% endif %}>
     {% block section_content %}{% endblock %}
 </section>
 {%- endblock %}

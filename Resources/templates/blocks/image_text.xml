@@ -12,6 +12,7 @@
     </meta>
     <properties>
         <xi:include href='sulu-block-bundle://properties/title.xml'/>
+        <xi:include href='sulu-block-bundle://properties/heading.xml'/>
         <xi:include href='sulu-block-bundle://properties/image.xml'/>
         <xi:include href='sulu-block-bundle://properties/text_editor.xml'/>
         <xi:include

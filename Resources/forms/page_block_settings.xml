@@ -4,61 +4,76 @@
       xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/form-1.0.xsd"
 >
     <key>page_block_settings</key>
-    <properties>
-        <property name="animation" type="single_select">
-            <meta>
-                <title lang="fr">Animation</title>
-            </meta>
-            <params>
-                <param name="default_value" value="fade"/>
-                <param name="values" type="collection">
-                    <param name="fade">
-                        <meta>
-                            <title lang="fr">Fade</title>
-                        </meta>
+
+        <properties>
+            <property name="animation" type="single_select">
+                <meta>
+                    <title lang="fr">Animation</title>
+                </meta>
+                <params>
+                    <param name="default_value" value=""/>
+                    <param name="values" type="collection">
+                        <param name="">
+                            <meta>
+                                <title lang="fr">Pas d'effet</title>
+                            </meta>
+                        </param>
+                        <param name="fade">
+                            <meta>
+                                <title lang="fr">Fade</title>
+                            </meta>
+                        </param>
+                        <param name="slide-up">
+                            <meta>
+                                <title lang="fr">Apparition vers le haut</title>
+                            </meta>
+                        </param>
+                        <param name="slide-down">
+                            <meta>
+                                <title lang="fr">Apparition vers le bas</title>
+                            </meta>
+                        </param>
+                        <param name="slide-left">
+                            <meta>
+                                <title lang="fr">Apparition vers la gauche</title>
+                            </meta>
+                        </param>
+                        <param name="slide-right">
+                            <meta>
+                                <title lang="fr">Apparition vers la droite</title>
+                            </meta>
+                        </param>
+                        <param name="zoom-in">
+                            <meta>
+                                <title lang="fr">Augmenter le zoom</title>
+                            </meta>
+                        </param>
+                        <param name="zoom-out">
+                            <meta>
+                                <title lang="fr">Diminuer le zoom</title>
+                            </meta>
+                        </param>
                     </param>
-                    <param name="slide-up">
-                        <meta>
-                            <title lang="fr">Apparition vers le haut</title>
-                        </meta>
-                    </param>
-                    <param name="slide-down">
-                        <meta>
-                            <title lang="fr">Apparition vers le bas</title>
-                        </meta>
-                    </param>
-                    <param name="slide-left">
-                        <meta>
-                            <title lang="fr">Apparition vers la gauche</title>
-                        </meta>
-                    </param>
-                    <param name="slide-right">
-                        <meta>
-                            <title lang="fr">Apparition vers la droite</title>
-                        </meta>
-                    </param>
-                    <param name="zoom-in">
-                        <meta>
-                            <title lang="fr">Augmenter le zoom</title>
-                        </meta>
-                    </param>
-                    <param name="zoom-out">
-                        <meta>
-                            <title lang="fr">Diminuer le zoom</title>
-                        </meta>
-                    </param>
-                </param>
-            </params>
-        </property>
-        <property name="animation_duration" type="number">
-            <meta>
-                <title lang="fr">Durée</title>
-            </meta>
-            <params>
-                <param name="min" value="200"/>
-                <param name="max" value="2000"/>
-                <param name="step" value="100"/>
-            </params>
-        </property>
-    </properties>
+                </params>
+            </property>
+            <property name="animation_duration" type="number">
+                <meta>
+                    <title lang="fr">Durée</title>
+                </meta>
+                <params>
+                    <param name="min" value="200"/>
+                    <param name="max" value="2000"/>
+                    <param name="step" value="100"/>
+                </params>
+            </property>
+
+            <property name="class_css" type="text_line">
+                <meta>
+                    <title lang="fr">Class CSS</title>
+                </meta>
+
+            </property>
+
+        </properties>
+
 </form>

@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<property xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+          name="heading"
+          type="single_select"
+          colspan="4"
+>
+    <meta>
+        <title lang="fr">Type de titre</title>
+    </meta>
+    <params>
+        <xi:include
+                href='sulu-block-bundle://app-property-params/single_select.xml'
+                xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params)'
+                parse='xml'
+        >
+            <xi:fallback/>
+        </xi:include>
+        <param name="default_value" value="h2"/>
+        <param name="values" type="collection">
+            <param name="h2">
+                <meta>
+                    <title lang="en">h2</title>
+                    <title lang="fr">h2</title>
+                </meta>
+            </param>
+            <param name="h3">
+                <meta>
+                    <title lang="en">h3</title>
+                    <title lang="fr">h3</title>
+                </meta>
+            </param>
+            <param name="h4">
+                <meta>
+                    <title lang="en">h4</title>
+                    <title lang="fr">h4</title>
+                </meta>
+            </param>
+        </param>
+    </params>
+
+</property>
