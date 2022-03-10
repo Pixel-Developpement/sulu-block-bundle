@@ -1,0 +1,51 @@
+{% extends '@Block/html5/base.html.twig' %}
+
+{% block section_content %}
+
+    {% set displayOption = (blockview) ? blockview['image'].displayOption|default('left') : block['image']['displayOption']|default('left') %}
+    <div class="bg-white overflow-hidden pt-8 pb-8 px-4 sm:px-6 lg:pt-24 lg:pb-16 lg:px-8">
+        <div class="relative max-w-7xl mx-auto">
+            <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+                <div class="relative lg:row-start-1 {% if displayOption == 'left' %}lg:col-start-1{% else %}lg:col-start-2{% endif %}">
+                    <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
+                        <figure>
+                            <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+                                {% block image %}
+                                    {% include '@Block/html5/parts/image.html.twig' %}
+                                {% endblock %}
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <div class="mt-8 lg:mt-0">
+                    <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
+                        <div>
+                            <{{ block['heading']|default('h2') }} class="mt-2 text-3xl leading-8 tracking-tight
+                            text-gray-900 sm:text-4xl ">
+
+                            <span class="text-base text-abricot font-semibold tracking-wide uppercase block font-sans">
+                                {% block title %}
+                                    {% include '@Block/html5/parts/title.html.twig' %}
+                                {% endblock %}
+                            </span>
+                            {% block subtitle %}
+                                {% include '@Block/html5/parts/subtitle.html.twig' %}
+                            {% endblock %}
+
+
+                        </{{ block['heading']|default('h2') }}>
+                    </div>
+                </div>
+                <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+                    {% block text %}
+                        {% include '@Block/html5/parts/text.html.twig' %}
+                    {% endblock %}
+
+                    {% block quote %}
+                        {% include '@Block/html5/parts/quote.html.twig' %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

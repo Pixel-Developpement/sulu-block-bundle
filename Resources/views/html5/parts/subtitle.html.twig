@@ -1,12 +1,12 @@
-{% set block_property = (block_property is defined) ? block_property : 'title' %}
+{% set block_property = (block_property is defined) ? block_property : 'subtitle' %}
 {% set element = (element is defined) ? element : 'h2' %}
 
-{% block before_title %}{% endblock %}
+{% block before_subtitle %}{% endblock %}
 
-{% block title %}
+{% block subtitle %}
     {% if block[block_property] is defined and block[block_property] is not empty %}
        {{ block[block_property] }}
     {% endif %}
 {% endblock %}
 
-{% block after_title %}{% endblock %}
+{% block after_subtitle %}{% endblock %}

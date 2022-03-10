@@ -3,18 +3,17 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:xi="http://www.w3.org/2001/XInclude"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
-          colspan="8"
-          name="title"
-          type="text_line"
+
+          name="quote"
+          type="text_area"
 >
     <meta>
-        <title lang="en">Title</title>
-        <title lang="fr">Titre</title>
-        <title lang="nl">Titel</title>
+        <title lang="en">Quote</title>
+        <title lang="fr">Citation</title>
     </meta>
     <params>
         <xi:include
-                href='sulu-block-bundle://app-property-params/title_additions.xml'
+                href='sulu-block-bundle://app-property-params/quote_additions.xml'
                 xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param)'
                 parse='xml'
         >

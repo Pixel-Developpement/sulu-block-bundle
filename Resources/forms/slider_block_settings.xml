@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<form xmlns="http://schemas.sulu.io/template/template"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/form-1.0.xsd"
+>
+    <key>slider_block_settings</key>
+    <properties>
+        <property name="slider_mode" type="single_select">
+            <meta>
+                <title lang="fr">Mode</title>
+            </meta>
+            <params>
+                <param name="default_value" value="carousel"/>
+                <param name="values" type="collection">
+                    <param name="carousel">
+                        <meta>
+                            <title lang="fr">Carousel</title>
+                        </meta>
+                    </param>
+                    <param name="gallery">
+                        <meta>
+                            <title lang="fr">Galerie</title>
+                        </meta>
+                    </param>
+                </param>
+            </params>
+        </property>
+
+    </properties>
+</form>
