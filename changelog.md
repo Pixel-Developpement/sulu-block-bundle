@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.3 (15/03/2022)
+
++ Ajout h4, h5, span, p et div pour la propriété heading
++ Ajout image gauche/droite pour le bloc texte
+
 ## 2.4.2 (10/03/2022)
 
 + Ajout d'un nouveau type de contenu (image + titre + sous titre + texte + citation)

@@ -124,8 +124,8 @@ Par exemple
 ## 3. Blocs disponibles
 - Texte enrichi avec un titre (text)
 - Images avec un titre (images)
-- Images avec un titre et un texte enrichi (images_text)
-- Image, titre avec sous-titre et citation (images_title_subtitle_quote)
+- Images avec un titre et un texte enrichi (image_text)
+- Image, titre avec sous-titre et citation (image_title_subtitle_quote)
 - Vidéo Youtube (youtube)
 - Lien (link)
 
