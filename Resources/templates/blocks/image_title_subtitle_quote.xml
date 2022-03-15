@@ -4,7 +4,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
 
-    name="images_title_subtitle_quote"
+    name="image_title_subtitle_quote"
     >
     <meta>
         <title lang="en">Image,title, subtitle and quote</title>
@@ -18,7 +18,7 @@
         <xi:include href='sulu-block-bundle://properties/text_editor.xml'/>
         <xi:include href='sulu-block-bundle://properties/quote.xml'/>
         <xi:include
-            href='sulu-block-bundle://app-properties/images_title_subtitle_quote.xml'
+            href='sulu-block-bundle://app-properties/image_title_subtitle_quote.xml'
             xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:properties/sulu:property)'
             parse='xml'
         >

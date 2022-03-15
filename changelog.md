@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.4 (15/03/2022)
+
+- Fix bloc image_title_subtitle_quote
+
 ## 2.4.3 (15/03/2022)
 
 + Ajout h4, h5, span, p et div pour la propriété heading
