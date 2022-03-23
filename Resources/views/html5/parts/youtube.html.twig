@@ -1,7 +1,7 @@
 {% set block_property = (block_property is defined) ? block_property : 'youtube_identifier' %}
 
 {%- block video_frame -%}
-    <div class='embed-container'>
+
         <iframe
             {% block video_frame_attributes %}
             src='{% block video_frame_source %}{% if block['confidentiality'] %}https://www.youtube-nocookie.com{% else %}https://www.youtube.com{% endif %}/embed/{{ block[block_property] }}?autoplay={% if block['autoplay'] %}1{% else %}0{% endif %}&loop={% if block['loop'] %}1{% else %}0{% endif %}&modestbranding={% if block['modestbranding'] %}1{% else %}0{% endif %}{% endblock %}'
@@ -13,5 +13,5 @@
             {% endblock %}
         >
         </iframe>
-    </div>
+
 {%- endblock -%}
