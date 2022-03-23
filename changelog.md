@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.5 (23/03/2022)
+
++ Ajout de la classe prose pour tailwind
++ Retrait mise en page des images pour les blocs
+
 ## 2.4.4 (15/03/2022)
 
 - Fix bloc image_title_subtitle_quote
