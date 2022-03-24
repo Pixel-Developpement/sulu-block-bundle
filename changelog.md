@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.6 (24/03/2022)
+
++ Retrait des classes inutiles
+- Correction balise heading
+
 ## 2.4.5 (23/03/2022)
 
 + Ajout de la classe prose pour tailwind

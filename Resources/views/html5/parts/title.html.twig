@@ -4,11 +4,11 @@
 {% block before_title %}{% endblock %}
 
 {% block title %}
-    <{{ element }}>
+
     {% if block[block_property] is defined and block[block_property] is not empty %}
        {{ block[block_property] }}
     {% endif %}
-    </{{ element }}>
+
 {% endblock %}
 
 {% block after_title %}{% endblock %}
