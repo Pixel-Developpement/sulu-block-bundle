@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.8 (29/03/2022)
+
+- Retrait des padding
+
 ## 2.4.7 (28/03/2022)
 
 - Fix alignement image gauche avec le texte

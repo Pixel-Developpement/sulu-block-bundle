@@ -9,14 +9,14 @@
                 <div class="relative lg:row-start-1 {% if displayOption == 'left' %}lg:col-start-1{% else %}lg:col-start-2{% endif %}">
                     <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
                         <figure>
-                                {% block image %}
-                                    {% include '@Block/html5/parts/image.html.twig' %}
-                                {% endblock %}
+                            {% block image %}
+                                {% include '@Block/html5/parts/image.html.twig' %}
+                            {% endblock %}
                         </figure>
                     </div>
                 </div>
                 {% if block['title'] is defined and block['title'] is not empty %}
-                <div class="mt-8 lg:mt-0">
+
                     <div class="mx-auto text-base">
                         <div>
                             <{{ block['heading']|default('h2') }} >
@@ -31,9 +31,9 @@
 
                         </{{ block['heading']|default('h2') }}>
                     </div>
-                </div>
+
                 {% endif %}
-                <div class="mt-5 text-gray-500 mx-auto lg:max-w-none ">
+                <div class=" mx-auto lg:max-w-none ">
                     {% block text %}
                         {% include '@Block/html5/parts/text.html.twig' %}
                     {% endblock %}
