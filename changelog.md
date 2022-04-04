@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.10 (04/04/2022)
+
++ Ajout effet sur les images et non sur la section
+
 ## 2.4.9 (04/04/2022)
 
 - Retrait des padding
