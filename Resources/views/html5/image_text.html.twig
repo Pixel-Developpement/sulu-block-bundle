@@ -5,7 +5,7 @@
 
     {% set displayOption = (blockview) ? blockview['image'].displayOption|default('left') : block['image']['displayOption']|default('left') %}
     <div class="relative max-w-7xl mx-auto">
-        <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+        <div class=" lg:grid lg:grid-cols-2 lg:gap-8">
             <div class="relative lg:row-start-1  {% if displayOption == 'left' %}lg:col-start-1{% else %}lg:col-start-2{% endif %}">
                 <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
                     <figure>
