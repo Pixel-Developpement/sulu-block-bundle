@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.9 (04/04/2022)
+
+- Retrait des padding
+
 ## 2.4.8 (29/03/2022)
 
 - Retrait des padding
