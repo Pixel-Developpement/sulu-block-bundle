@@ -2,9 +2,11 @@
 
 {% block section_content %}
     {% block title %}
+        {% if block['title'] is defined and block['title'] is not empty %}
         <{{ block['heading']|default('h2') }} >
         {% include '@Block/html5/parts/title.html.twig' %}
         </{{ block['heading']|default('h2') }}>
+        {% endif %}
     {% endblock %}
     {%- block text -%}
         {% include '@Block/html5/parts/text.html.twig' %}
