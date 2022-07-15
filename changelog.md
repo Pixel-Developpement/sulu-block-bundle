@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.13 (15/04/2022)
+
+- Fix compatibilité avec php 8
+
 ## 2.4.12 (15/04/2022)
 
 + Compatible php 8.0
