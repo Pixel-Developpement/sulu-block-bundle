@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.4.12 (15/04/2022)
+
++ Compatible php 8.0
++ Fork de protocol-stream (pour être compatible php 8)
++ Ajout de aos à la place de sals pour les animations
+
 ## 2.4.11 (05/04/2022)
 
 - Fix interlignage
