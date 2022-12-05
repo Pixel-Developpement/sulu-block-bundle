@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.1 (/05/12/2022)
+
+- Fix prose
+
 ## 2.5.0 (05/12/2022)
 
 + Ajout bloc citation et image avant et après
