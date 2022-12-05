@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.5.0 (05/12/2022)
+
++ Ajout bloc citation et image avant et après
++ Ajout animation
++ Diverses améliorations/modifications
+
 ## 2.4.13 (15/04/2022)
 
 - Fix compatibilité avec php 8

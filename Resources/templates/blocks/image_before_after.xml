@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<type xmlns="http://schemas.sulu.io/template/template"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+
+      name="image_before_after"
+>
+    <meta>
+        <title lang="en">Image before and after</title>
+        <title lang="fr">Image avant/après</title>
+    </meta>
+    <properties>
+        <property name="before" type="single_media_selection" colspan="6" mandatory="true">
+            <meta>
+                <title lang="en">before</title>
+                <title lang="fr">avant</title>
+            </meta>
+            <params>
+                <param name="types" value="image"/>
+            </params>
+        </property>
+
+        <property name="after" type="single_media_selection" colspan="6" mandatory="true">
+            <meta>
+                <title lang="en">after</title>
+                <title lang="fr">après</title>
+            </meta>
+            <params>
+                <param name="types" value="image"/>
+            </params>
+        </property>
+
+
+        <xi:include
+                href='sulu-block-bundle://app-properties/image_before_after.xml'
+                xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:properties/sulu:property)'
+                parse='xml'
+        >
+            <xi:fallback/>
+        </xi:include>
+    </properties>
+</type>

@@ -1,0 +1,15 @@
+{% extends '@Block/html5/base.html.twig' %}
+
+{% block section_content %}
+    {% set defaultFormat = 'before_after' %}
+    <div class="image-compare">
+        {% block before %}
+            {% set resolved_image = (blockview) ? block['before'] : sulu_resolve_media(block['before']['id'], app.request.locale) %}
+            <img src="{{ resolved_image.thumbnails[defaultFormat] }}" alt=""/>
+        {% endblock %}
+        {% block after %}
+            {% set resolved_image = (blockview) ? block['after'] : sulu_resolve_media(block['after']['id'], app.request.locale) %}
+            <img src="{{ resolved_image.thumbnails[defaultFormat] }}" alt=""/>
+        {% endblock %}
+    </div>
+{% endblock %}
