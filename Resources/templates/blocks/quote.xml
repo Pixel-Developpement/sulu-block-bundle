@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<type xmlns="http://schemas.sulu.io/template/template"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+    name="quote"
+    >
+    <meta>
+        <title lang="en">Quote</title>
+        <title lang="fr">Citation</title>
+    </meta>
+    <properties>
+        <xi:include href='sulu-block-bundle://properties/quote.xml'/>
+        <xi:include href='sulu-block-bundle://properties/title.xml'/>
+        <xi:include
+            href='sulu-block-bundle://app-properties/quote.xml'
+            xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:properties/sulu:property)'
+            parse='xml'
+        >
+            <xi:fallback/>
+        </xi:include>
+    </properties>
+</type>

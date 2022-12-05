@@ -1,0 +1,19 @@
+{% extends '@Block/html5/base.html.twig' %}
+
+{% block section_content %}
+    <blockquote>
+
+    {%- block text -%}
+        {% set block_property = (block_property is defined) ? block_property : 'quote' %}
+        {% set text = (block[block_property] is defined) ?  block[block_property] : false %}
+        {{ text|raw }}
+    {%- endblock -%}
+
+    {% block title %}
+        {% if block['title'] is defined and block['title'] is not empty %}
+            <br />
+            {% include '@Block/html5/parts/title.html.twig' %}
+        {% endif %}
+    {% endblock %}
+    </blockquote>
+{% endblock %}
