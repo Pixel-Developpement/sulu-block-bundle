@@ -1,6 +1,11 @@
 # Changelog
 
-## 2.5.1 (/05/12/2022)
+## 2.5.2 (06/12/2022)
+
++ Ajout bloc 2 et 3 colonnes
++ Ajout animation au niveau du container et non de la section
+
+## 2.5.1 (05/12/2022)
 
 - Fix prose
 

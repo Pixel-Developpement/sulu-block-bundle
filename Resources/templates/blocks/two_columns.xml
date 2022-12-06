@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<type xmlns="http://schemas.sulu.io/template/template"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+
+      name="two_columns"
+>
+    <meta>
+        <title lang="en">2 columns blocs</title>
+        <title lang="fr">Bloc 2 colonnes</title>
+    </meta>
+    <properties>
+
+        <property name="title" type="text_line" colspan="12">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="fr">Titre</title>
+            </meta>
+        </property>
+
+
+        <property name="title_one" type="text_line" colspan="6">
+            <meta>
+                <title lang="en">Column one title</title>
+                <title lang="fr">Titre de la colonne 1</title>
+            </meta>
+        </property>
+
+        <property name="image_one" type="single_media_selection" colspan="6">
+            <meta>
+                <title lang="en">Image</title>
+                <title lang="fr">Image</title>
+            </meta>
+            <params>
+                <param name="types" value="image"/>
+            </params>
+        </property>
+
+        <property name="text_one" type="text_editor" colspan="12">
+            <meta>
+                <title lang="en">Text Column one</title>
+                <title lang="fr">Texte de la colonne 1</title>
+            </meta>
+        </property>
+
+
+
+        <property name="title_two" type="text_line" colspan="6">
+            <meta>
+                <title lang="en">Column Two title</title>
+                <title lang="fr">Titre de la colonne 2</title>
+            </meta>
+        </property>
+
+        <property name="image_two" type="single_media_selection" colspan="6">
+            <meta>
+                <title lang="en">Image</title>
+                <title lang="fr">Image</title>
+            </meta>
+            <params>
+                <param name="types" value="image"/>
+            </params>
+        </property>
+
+        <property name="text_two" type="text_editor" colspan="12">
+            <meta>
+                <title lang="en">Text Column Two</title>
+                <title lang="fr">Texte de la colonne 2</title>
+            </meta>
+        </property>
+
+        <xi:include
+                href='sulu-block-bundle://app-properties/two_columns.xml'
+                xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:properties/sulu:property)'
+                parse='xml'
+        >
+            <xi:fallback/>
+        </xi:include>
+    </properties>
+</type>
