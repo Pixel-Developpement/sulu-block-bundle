@@ -4,12 +4,16 @@
     {% set defaultFormat = 'before_after' %}
     <div class="image-compare">
         {% block before %}
-            {% set resolved_image = (blockview) ? block['before'] : sulu_resolve_media(block['before']['id'], app.request.locale) %}
-            <img src="{{ resolved_image.thumbnails[defaultFormat] }}" alt=""/>
+            {% if block['before'] is defined and block['before'] is not empty %}
+                {% set resolved_image = (blockview) ? block['before'] : sulu_resolve_media(block['before']['id'], app.request.locale) %}
+                <img src="{{ resolved_image.thumbnails[defaultFormat] }}" alt=""/>
+            {% endif %}
         {% endblock %}
         {% block after %}
-            {% set resolved_image = (blockview) ? block['after'] : sulu_resolve_media(block['after']['id'], app.request.locale) %}
-            <img src="{{ resolved_image.thumbnails[defaultFormat] }}" alt=""/>
+            {% if block['after'] is defined and block['after'] is not empty %}
+                {% set resolved_image = (blockview) ? block['after'] : sulu_resolve_media(block['after']['id'], app.request.locale) %}
+                <img src="{{ resolved_image.thumbnails[defaultFormat] }}" alt=""/>
+            {% endif %}
         {% endblock %}
     </div>
 {% endblock %}

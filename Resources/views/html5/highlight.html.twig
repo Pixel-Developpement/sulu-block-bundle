@@ -1,0 +1,13 @@
+{% extends '@Block/html5/base.html.twig' %}
+
+{% block section_content %}
+    <pre>
+        <code class="{% block title %}language-{% if block['language'] is defined and block['language'] is not empty %}{{ block['language'] }}{% endif %}{% endblock %}">
+    {%- block code -%}
+        {% if block['code'] is defined and block['code'] is not empty %}
+            {{ block['code'] }}
+        {% endif %}
+    {% endblock %}
+    </code>
+    </pre>
+{% endblock %}
