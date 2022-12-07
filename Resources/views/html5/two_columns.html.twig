@@ -13,15 +13,17 @@
         {% block column_one %}
             <div class="column">
                 <div class="column-content">
-                    {% set resolved_image = (blockview) ? block['image_one'] : sulu_resolve_media(block['image_one']['id'], app.request.locale) %}
-                    {% set image %}
-                        {% set defaultFormat = 'column' %}
-                        {% set mobileFormat = 'column_mobile' %}
-                        {{ get_image(resolved_image|default, defaultFormat, {
-                            '(max-width: 991px)': mobileFormat,
-                        }) }}
-                    {% endset %}
-                    {{ image }}
+                    {% if block['image_one'] is defined and block['image_one'] is not empty %}
+                        {% set resolved_image = (blockview) ? block['image_one'] : sulu_resolve_media(block['image_one']['id'], app.request.locale) %}
+                        {% set image %}
+                            {% set defaultFormat = 'column' %}
+                            {% set mobileFormat = 'column_mobile' %}
+                            {{ get_image(resolved_image|default, defaultFormat, {
+                                '(max-width: 991px)': mobileFormat,
+                            }) }}
+                        {% endset %}
+                        {{ image }}
+                    {% endif %}
                     {% if block['title_one'] is defined and block['title_one'] is not empty %}
                         <h3>{{ block['title_one'] }}</h3>{% endif %}
                     {% if block['text_one'] is defined and block['text_one'] is not empty %}
@@ -31,17 +33,19 @@
             </div>
         {% endblock %}
         {% block column_two %}
-            <div class="column">
+            <div class="column column-two">
                 <div class="column-content">
-                    {% set resolved_image = (blockview) ? block['image_two'] : sulu_resolve_media(block['image_two']['id'], app.request.locale) %}
-                    {% set image %}
-                        {% set defaultFormat = 'column' %}
-                        {% set mobileFormat = 'column_mobile' %}
-                        {{ get_image(resolved_image|default, defaultFormat, {
-                            '(max-width: 991px)': mobileFormat,
-                        }) }}
-                    {% endset %}
-                    {{ image }}
+                    {% if block['image_two'] is defined and block['image_two'] is not empty %}
+                        {% set resolved_image = (blockview) ? block['image_two'] : sulu_resolve_media(block['image_two']['id'], app.request.locale) %}
+                        {% set image %}
+                            {% set defaultFormat = 'column' %}
+                            {% set mobileFormat = 'column_mobile' %}
+                            {{ get_image(resolved_image|default, defaultFormat, {
+                                '(max-width: 991px)': mobileFormat,
+                            }) }}
+                        {% endset %}
+                        {{ image }}
+                    {% endif %}
                     {% if block['title_two'] is defined and block['title_two'] is not empty %}
                         <h3>{{ block['title_two'] }}</h3>{% endif %}
                     {% if block['text_two'] is defined and block['text_two'] is not empty %}

@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<type xmlns="http://schemas.sulu.io/template/template"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+    name="highlight"
+    >
+    <meta>
+        <title lang="en">Code</title>
+        <title lang="fr">Code</title>
+    </meta>
+    <properties>
+        <property name="language" type="text_line" colspan="12">
+            <meta>
+                <title lang="en">Language (html, php, javascript, python....)</title>
+                <title lang="fr">Langage de programmation (html, php, javascript, python....)</title>
+            </meta>
+        </property>
+        <property name="code" type="text_area" colspan="6">
+            <meta>
+                <title lang="en">Code</title>
+                <title lang="fr">Code</title>
+            </meta>
+        </property>
+        <xi:include
+            href='sulu-block-bundle://app-properties/highlight.xml'
+            xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:properties/sulu:property)'
+            parse='xml'
+        >
+            <xi:fallback/>
+        </xi:include>
+    </properties>
+</type>
