@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.4 (07/12/2022)
+
+- Fix class pour le bloc 2 et 3 colonnes
+
 ## 2.5.3 (07/12/2022)
 
 + Ajout bloc pour le code
