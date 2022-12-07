@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.5.3 (07/12/2022)
+
++ Ajout bloc pour le code
+- Ajout class pour le bloc 2 et 3 colonnes
+- Fix vérification image pour les blocs colonnes + avant / après
+
 ## 2.5.2 (06/12/2022)
 
 + Ajout bloc 2 et 3 colonnes

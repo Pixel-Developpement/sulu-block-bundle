@@ -130,6 +130,8 @@ Par exemple
 - Lien (link)
 - Citation (quote)
 - Avant/Après (image_before_after)
+- Deux colonnes (two_columns)
+- Trois colonnes (three_columns)
 
 ## 4. Ajouter des propriétés
 Lorsque vous utilisez un bloc et que vous souhaitez ajouter des propriétés supplémentaires, vous pouvez les configurer séparément dans `config/templates/PixelSuluBlockBundle/properties/{blockname}.xml`.
