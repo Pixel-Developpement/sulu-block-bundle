@@ -1,0 +1,38 @@
+{% extends '@Block/html5/base.html.twig' %}
+
+
+{% block section_content %}
+
+    {% set displayOption = (blockview) ? blockview['image'].displayOption|default('left') : block['image']['displayOption']|default('left') %}
+    <div class="relative max-w-7xl mx-auto">
+        <div class=" lg:grid lg:grid-cols-2 lg:gap-8">
+            <div class="relative lg:row-start-1  {% if displayOption == 'left' %}lg:col-start-1{% else %}lg:col-start-2{% endif %}">
+                <div class="relative text-base mx-auto max-w-prose lg:max-w-none" {% include('@Block/html5/animation.html.twig') %}>
+                    <figure>
+                        {% block video %}
+                            {% include '@Block/html5/parts/video.html.twig' %}
+                        {% endblock %}
+                    </figure>
+                </div>
+            </div>
+            {% if block['title'] is defined and block['title'] is not empty %}
+
+                <div class="mx-auto ">
+                    <div>
+                        <{{ block['heading']|default('h2') }} >
+                        {% block title %}
+                            {% include '@Block/html5/parts/title.html.twig' %}
+                        {% endblock %}
+                    </{{ block['heading']|default('h2') }}>
+                </div>
+
+            {% endif %}
+            <div class="text-gray-500 mx-auto lg:max-w-none ">
+                {% block text %}
+                    {% include '@Block/html5/parts/text.html.twig' %}
+                {% endblock %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
