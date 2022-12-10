@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<property xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+          name="loop"
+          type="checkbox"
+>
+    <params>
+        <param name="type" value="toggler"/>
+        <param name="label">
+            <meta>
+                <title lang="fr">Rejouer automatiquement ?</title>
+                <title lang="en">Loop ?</title>
+            </meta>
+        </param>
+        <xi:include
+                href='sulu-block-bundle://app-property-params/loop_additions.xml'
+                xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param)'
+                parse='xml'
+        >
+            <xi:fallback/>
+        </xi:include>
+    </params>
+</property>

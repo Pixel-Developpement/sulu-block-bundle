@@ -24,26 +24,9 @@
                 </param>
             </params>
         </property>
-        <property name="autoplay" type="checkbox">
-            <params>
-                <param name="type" value="toggler"/>
-                <param name="label">
-                    <meta>
-                        <title lang="fr">Lancer la vidéo automatiquement ?</title>
-                    </meta>
-                </param>
-            </params>
-        </property>
-        <property name="loop" type="checkbox">
-            <params>
-                <param name="type" value="toggler"/>
-                <param name="label">
-                    <meta>
-                        <title lang="fr">Rejouer automatiquement ?</title>
-                    </meta>
-                </param>
-            </params>
-        </property>
+        <xi:include href='sulu-block-bundle://properties/autoplay.xml'/>
+        <xi:include href='sulu-block-bundle://properties/loop.xml'/>
+
         <property name="modestbranding" type="checkbox">
             <params>
                 <param name="type" value="toggler"/>

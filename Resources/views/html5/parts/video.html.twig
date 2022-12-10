@@ -1,0 +1,10 @@
+{% set block_property = (block_property is defined) ? block_property : 'video' %}
+
+{%- block video -%}
+    {% set resolved_video = (blockview) ? block['video'] : sulu_resolve_media(block['video']['id'], app.request.locale) %}
+    {% if resolved_video is defined %}
+        <video controls {% if block['autoplay'] %}autoplay{% endif %} {% if block['loop'] %}loop{% endif %} >
+            <source src="{{ resolved_video.url }}">
+        </video>
+    {% endif %}
+{%- endblock -%}
