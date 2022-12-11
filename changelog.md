@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.6 
+
+- Fix code mise en page
+
 ## 2.5.5 (10/12/2022)
 
 + Ajout bloc video avec texte
