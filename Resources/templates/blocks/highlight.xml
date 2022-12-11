@@ -16,7 +16,7 @@
                 <title lang="fr">Langage de programmation (html, php, javascript, python....)</title>
             </meta>
         </property>
-        <property name="code" type="text_area" colspan="6">
+        <property name="code" type="text_area" colspan="12">
             <meta>
                 <title lang="en">Code</title>
                 <title lang="fr">Code</title>
